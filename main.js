@@ -1,92 +1,79 @@
-console.log('desde main')
+console.log('loops and arrays')
+
+// Array Mario Luigi Bowser Toad Peach
+
+let marioCharacters = ['Mario','Luigi','Bowser','Toad','Peach','Star']
+
+console.log(marioCharacters)
+// console.log(marioCharacters[0])
+// console.log(marioCharacters[1])
+// console.log(marioCharacters[2])
+// console.log(marioCharacters[3])
+// console.log(marioCharacters[4])
+
+// for(inicializacion;condicion;actualizacion)
 
 
-// let nombre = 'diego'
-// console.log('Antes de la funcion ', nombre )
-// function saludarAlumno(nombre){
-//     console.log('Dentro de la funcion ', nombre )
-//     console.log('hola ' + nombre)
-// }
-// // console.log('Despeus÷ de la funcion ', nombre )
-// saludarAlumno('Jose')
-// saludarAlumno('Alicia')
-// saludarAlumno('Yara')
-
-
-// function transportar(origen, destino){
-//     console.log('saliendo de ' + origen)
-//     console.log('transportando')
-//     console.log('llegando a ',destino)
-// }
-
-// transportar('casa','parque')
-// transportar('parque','oficina')
-// transportar('oficina','casa')
-function suma(num1,num2){
-    return num1 + num2
+// i = 7. 7 >= 0 marioCharacters[7]
+for(i=marioCharacters.length -1; i >= 0 ;i--){
+    console.log(marioCharacters[i])
 }
 
-// console.log(suma(2,2)) // 4
-// console.log(suma(1,4)) // 5 
-// console.log(suma(0,6)) // 6
-// console.log(suma(12,3)) // 15
 
-// function admitido(edad){
-//     if(edad >= 18){
-//         return 'Puedes entrar'
-//         console.log('flag 6')
-//     }else{
-//         return 'Tienes que esperar'
-//     }
-// }
+let numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 
-// console.log(admitido(15)) // 'Tienes que esperar'
-// console.log(admitido(22)) // 'Puedes entrar'
-
-
-// function calculoCuotaAutonomo(ventasMensuales){
-//     return ventasMensuales * 0.2
-// }
-
-// document.getElementById('cantidad').innerText = calculoCuotaAutonomo(10000)
-
-
-
-// console.log('ANTES se ejecuto window onload');
-// window.onload = function() {
-
-//     console.log('se ejecuto window onload');
+// for(i=0;i < numbers.length; i = i + 3){
+//     console.log(i)
+//     console.log(numbers[i])
 
 // }
-// console.log('DESPUES se ejecuto window onload');
 
+let marioGoodCharacters = []
 
-// Funciones declarativas
-saludoDeclaratibvo()
-function saludoDeclaratibvo(){
-    console.log('hola declarativo')
+for(i=0; i < marioCharacters.length ; i++ ){
+    console.log(marioCharacters[i])
+    if(marioCharacters[i] != 'Bowser'){
+        marioGoodCharacters.push(marioCharacters[i])
+    }
 }
 
-// funciones de expresión 
-const saludoEpresion = function(){
-    console.log('hola expresion')
+
+console.log(marioGoodCharacters)
+
+let filteredCharacters = marioCharacters.filter( (character)=> character != 'Bowser' )
+console.log(filteredCharacters)
+
+console.log( numbers.filter( (elemento)=> elemento > 7 ) )
+console.log( numbers.filter( (elemento)=> elemento != 7 ) )
+console.log( numbers.filter( (elemento)=> elemento % 3 == 0 ) )
+console.log( numbers.filter( (elemento)=> elemento > 9 ) )
+console.log( numbers.filter( (elemento)=> elemento < 16 ) )
+
+console.log( numbers.filter( (elemento)=> elemento > 9 && elemento < 16 ) )
+
+let newNumbers = []
+
+for(i=0; i < numbers.length ; i = i + 1){
+    console.log(numbers[i] *  4 )
+    newNumbers.push(numbers[i] *  4) 
 }
-saludoEpresion()
+console.log(newNumbers)
 
-// funciones de flecha Arrow 
-const saludoFlecha = ()=>{
-    console.log('hola flecha')
-}
-saludoFlecha()
+let mapNumbers = numbers.map( numero => numero * 4 )
+console.log(mapNumbers)
+
+console.log( marioCharacters )
+console.log( marioCharacters.map( (character)=> character + 's' ) )
 
 
-// PSEUDO Codigo  GEnerador de excusas
-// desarrolalr un generador de excusas
-// 1. modificar html desde Js
-// 2. declarar variables (opciones entre las que eliges)
-// 3. tomar un elemento aleatorio dentro del array Who
-// 4. tomar un elemento aleatorio dentro del array action
-// 5. tomar un elemento aleatorio dentro del array what
-// 6. tomar un elemento aleatorio dentro del array when
-// 7. unir palabras aleatorias y crear una frase
-// 8. asignar frase al html desde js
+marioCharacters.forEach( (item)=>{
+    console.log(item)
+})
+
+console.log('Do while')
+let j = 20
+do {
+    console.log(j)
+    /// cualuiqer coda
+    j++
+}while( j < 10)
