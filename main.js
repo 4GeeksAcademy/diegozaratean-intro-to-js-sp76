@@ -114,18 +114,57 @@ let sueldo = 5000
 
 
 // ternary operator
-// (condicion) ? verdadero :  falso
-let mensaje =  (sueldo >= 1000) ?  'Debes pagar un impuesto de 10%' : 
-                    (sueldo >= 1000) ?  'Debes pagar un impuesto de 10%' : 
-                        (sueldo >= 1000) ?  'Debes pagar un impuesto de 10%' : 'Debes pagar un impuesto de 5%'
+// // (condicion) ? verdadero :  falso
+// let mensaje =  (sueldo >= 1000) ?  'Debes pagar un impuesto de 10%' : 
+//                     (sueldo >= 1000) ?  'Debes pagar un impuesto de 10%' : 
+//                         (sueldo >= 1000) ?  'Debes pagar un impuesto de 10%' : 'Debes pagar un impuesto de 5%'
 
-console.log(mensaje)
+// console.log(mensaje)
 
 
-// document.getElementById('content').innerHTML = '<h1>'+ mensaje+'</h1>'
-document.getElementById('content').insertAdjacentHTML(
-    'afterbegin',
-    `<p>${mensaje}</p>`
-  );
+// // document.getElementById('content').innerHTML = '<h1>'+ mensaje+'</h1>'
+// document.getElementById('content').insertAdjacentHTML(
+//     'afterbegin',
+//     `<p>${mensaje}</p>`
+//   );
   
-  
+
+
+
+let persona =  {
+  nombre: 'alicia',
+  apellido: 'Benavente',
+  edad: 27,
+  skill: ['js','python','react'],
+  programar: function(){
+    console.log('estoy programando')
+  }
+}
+
+
+// Objeto Perro,. nombre, raza , metodo ladrar 'Wow'
+let perro = {
+  nombre: 'kiv',
+  raza: 'gato',
+  ladrar: function () {
+    console.log('Wow')
+  }
+}
+
+
+// PSEUDOCODIGO
+// DONE: crear un boton en html
+// DONE: crear una funcion que cambie el texto
+// DONE:     cambiar el contenido del texto a 'Nuevo titulo'
+// DONE:      Cambior el color de fondo a rojo
+// cuando le de click al boton en html ejecutar una funcion en js
+
+
+
+function changeTitle(){
+  console.log('changeTitle')
+  document.getElementById('title').innerHTML = 'Nuevo titulo'
+  document.getElementById('title').style.backgroundColor = 'red'
+}
+
+// changeTitle()
