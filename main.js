@@ -138,7 +138,9 @@ let persona =  {
   skill: ['js','python','react'],
   programar: function(){
     console.log('estoy programando')
-  }
+  },
+  'lugar de nacimiento': 'madrid'
+
 }
 
 
@@ -161,10 +163,32 @@ let perro = {
 
 
 
+// PSEUDOCODIGO
+// cuand le de click a un boton saludar a cada persona de forma aleatoria
+// DONE: cuando le de click a un boton ejectuar una funciona
+
 function changeTitle(){
   console.log('changeTitle')
-  document.getElementById('title').innerHTML = 'Nuevo titulo'
-  document.getElementById('title').style.backgroundColor = 'red'
+  let nombres = ['aaron','alicia','miguel','davinia','alberto','jose']
+  let colores = ['red','blue','green','yellow','purple']
+  document.getElementById('title').innerHTML =  "hola "  +  nombres[ Math.floor(Math.random() * nombres.length)]
+  document.getElementById('title').style.backgroundColor = colores[ Math.floor(Math.random() * colores.length)] 
 }
 
 // changeTitle()
+
+
+
+// PSEUDOCODIGO
+
+// cuando le de click sobre el boton llamar una funcion
+function lanzarDados(){
+  console.log('lanzarDados')
+  // modificar el valor del dado 1 y 2 en hmtl
+  document.getElementById('dado1').innerHTML = Math.ceil(Math.random() * 6)
+  document.getElementById('dado2').innerHTML = Math.ceil(Math.random() * 6)
+}
+// generar dos valores aleatorios 1 - 6
+
+
+
