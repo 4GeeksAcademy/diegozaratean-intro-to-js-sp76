@@ -192,3 +192,34 @@ function lanzarDados(){
 
 
 
+
+
+
+// PSEUDOCODIGO
+// agregar entradas para alto y ancho y un boton que redimensionar los dados
+// DONE: agregar dos inputs uno para ancho otro para alto y un boton en html
+// DONE:cuando le de click al boton ejecutar una funcion
+function changeDiceSize(){  
+  let diceHeight = document.getElementById('height').value
+  let diceWidth = document.getElementById('width').value  
+  document.getElementById('dado1').style.height = diceHeight + 'px'
+  document.getElementById('dado1').style.width = diceWidth + 'px'
+  document.getElementById('dado1').style.lineHeight =  diceHeight + 'px'
+  document.getElementById('dado2').style.height = diceHeight + 'px'
+  document.getElementById('dado2').style.width = diceWidth + 'px'
+}
+
+
+let boton1 = document.getElementById('boton1')
+boton1.onclick = function () { 
+  changeDiceSize()
+};
+
+
+// PSEUDOCODIGO
+// cada 3 segundos quiero lanzar los dados
+// cada 3 segundos hacer algo(console logg hola)
+
+setInterval(lanzarDados, 3000);
+
+
